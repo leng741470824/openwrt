@@ -13,6 +13,10 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: test
+    - name: feeds update
       run: ./scripts/feeds update -a
+    - name: feeds install
+      run: ./scripts/feeds install -a
+    - name: menuconfig
+      run: make menuconfig
 
